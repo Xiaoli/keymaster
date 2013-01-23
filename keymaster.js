@@ -5,18 +5,19 @@
 ;(function(global){
   var k,
     _handlers = {},
-    _mods = { 16: false, 18: false, 17: false, 91: false },
+    _mods = { 16: false, 18: false, 17: false, 91: false, 9: false },
     _scope = 'all',
     // modifier keys
     _MODIFIERS = {
       '⇧': 16, shift: 16,
       '⌥': 18, alt: 18, option: 18,
       '⌃': 17, ctrl: 17, control: 17,
-      '⌘': 91, command: 91
+      '⌘': 91, command: 91,
+      tab: 9
     },
     // special keys
     _MAP = {
-      backspace: 8, tab: 9, clear: 12,
+      backspace: 8, clear: 12,
       enter: 13, 'return': 13,
       esc: 27, escape: 27, space: 32,
       left: 37, up: 38,
@@ -77,7 +78,7 @@
           if((!_mods[k] && index(handler.mods, +k) > -1) ||
             (_mods[k] && index(handler.mods, +k) == -1)) modifiersMatch = false;
         // call the handler and stop the event if neccessary
-        if((handler.mods.length == 0 && !_mods[16] && !_mods[18] && !_mods[17] && !_mods[91]) || modifiersMatch){
+        if((handler.mods.length == 0 && !_mods[16] && !_mods[18] && !_mods[17] && !_mods[91] && !_mods[9]) || modifiersMatch){
           if(handler.method(event, handler)===false){
             if(event.preventDefault) event.preventDefault();
               else event.returnValue = false;

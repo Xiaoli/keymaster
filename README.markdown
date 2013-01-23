@@ -51,10 +51,10 @@ key('⌘+r, ctrl+r', function(event, handler){
 ## Supported keys
 
 Keymaster understands the following modifiers:
-`⇧`, `shift`, `option`, `⌥`, `alt`, `ctrl`, `control`, `command`, and `⌘`.
+`⇧`, `shift`, `option`, `⌥`, `alt`, `ctrl`, `control`, `command`, `⌘`, and `tab`.
 
 The following special keys can be used for shortcuts:
-`backspace`, `tab`, `clear`, `enter`, `return`, `esc`, `escape`, `space`,
+`backspace`, `clear`, `enter`, `return`, `esc`, `escape`, `space`,
 `up`, `down`, `left`, `right`, `home`, `end`, `pageup`, `pagedown`, `del`, `delete`
 and `f1` through `f19`.
 
